@@ -16,7 +16,7 @@ email_type_mapping = {'spam':0, 'ham':1}
 dataframe['emailType'] = dataframe['emailType'].map(email_type_mapping)
 
 # Se divide el dataset entre entrenamiento y testeo
-X_train, X_test, y_train, y_test = train_test_split(dataframe['mjs'], dataframe['emailType'], test_size = 0.2, random_state = 42)
+X_train, X_test, y_train, y_test = train_test_split(dataframe['mjs'], dataframe['emailType'], test_size = 0.2, random_state = 12)
 
 # Crear un pipeline con CounterVectorizer y MultinomialNB para el Laplace Smoothing
 pipeline = Pipeline([
